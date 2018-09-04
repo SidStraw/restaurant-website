@@ -1,0 +1,49 @@
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#logo {
+    height: 90px;
+}
+
+#banner {
+    /* background-image: url(./img/banner1.jpg); */
+    /* background-size: cover; */
+    height: 90vh;
+    margin-top: -90px;
+    padding-top: 90px;
+    background-color: rgba(250, 243, 183, 0.151)
+    /* background-position: center 0; */
+    /* background-repeat: no-repeat; */
+}
+
+#banner::after {
+    content: "";
+    /* 鋪滿整個父元素 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* 放到父元素內容的下層 */
+    z-index: -2;
+    /* 像父元素一樣展示背景 */
+    background-image: url(./img/banner1.jpg);
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    margin-top: -90px;
+    height: 90vh;
+}
+
+#banner H1 {
+    font-size: 7rem;
+    text-shadow: 0 3px 5px #151B21;
+    flex: 1 0 100%;
+}
+
+#banner H2 {
+    font-size: 4.5rem;
+    text-shadow: 0 3px 5px #151B21;
+    flex: 1 0 100%;
+}
