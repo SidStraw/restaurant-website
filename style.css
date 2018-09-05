@@ -1,3 +1,11 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Microsoft JhengHei, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container-fluid {
+    z-index: -10;
+}
+
 .navbar {
     background: rgba(0, 0, 0, 0.8);
 }
@@ -36,14 +44,78 @@
     height: 90vh;
 }
 
-#banner H1 {
-    font-size: 7rem;
-    text-shadow: 0 3px 5px #151B21;
-    flex: 1 0 100%;
+@media screen and (orientation:landscape) {
+    #banner {
+        height: 125vh;
+    }
+    #banner::after {
+        height: 125vh;
+    }
 }
 
-#banner H2 {
-    font-size: 4.5rem;
+#banner h1 {
+    font-size: 3rem;
     text-shadow: 0 3px 5px #151B21;
-    flex: 1 0 100%;
+    flex: 1 0 60vw;
+}
+
+#banner h2 {
+    font-size: 2rem;
+    text-shadow: 0 3px 5px #151B21;
+    flex: 1 0 60vw;
+}
+
+@media screen and (min-width:321px) {
+    #banner h1 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* (orientation:landscape)手機橫式 */
+
+@media screen and (orientation:landscape) {
+    #banner h1 {
+        font-size: 3rem;
+    }
+    #banner h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* (orientation:portrait)手機直式 */
+
+@media screen and (min-width:415px) and (orientation:portrait) {
+    #banner h1 {
+        font-size: 4.5rem;
+    }
+    #banner h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #banner h1 {
+        font-size: 5rem;
+    }
+    #banner h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #banner h1 {
+        font-size: 7rem;
+    }
+    #banner h2 {
+        font-size: 4.5rem;
+    }
+}
+
+.specialImg {
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(./img/special1.jpg);
 }
