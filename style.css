@@ -1,6 +1,40 @@
+:root{
+    --logo:#feca07;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Microsoft JhengHei, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* height: 0; */
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#navbarNavAltMarkup .nav-link{
+    color: var(--light)
+}
+
+#navbarNavAltMarkup .nav-link.active{
+    color: var(--logo);
+}
+
+
+
+
+
+/* Header */
 
 #warp {
     background-image: url(./img/banner1.jpg);
@@ -23,23 +57,13 @@ body {
 }
 
 #banner {
-    /* background-image: url(./img/banner1.jpg); */
     /* background-size: cover; */
     height: 100vh;
-    /* margin-top: -90px; */
-    /* padding-top: 90px; */
+    /* margin-top: -90px;
+    padding-top: 90px; */
     background-color: rgba(250, 243, 183, 0.151)
     /* background-position: center 0; */
     /* background-repeat: no-repeat; */
-}
-
-@media screen and (orientation:landscape) {
-    #banner {
-        height: 125vh;
-    }
-    #banner::after {
-        height: 125vh;
-    }
 }
 
 #banner h2 {
@@ -106,5 +130,40 @@ body {
     height: 300px;
     background-position: center center;
     background-size: cover;
-    background-image: url(./img/special1.jpg);
 }
+
+
+/* 價位方案 */
+
+
+/* @media screen and (min-width:768px) {
+
+    #price .container{
+        margin-right: 480px;
+        
+    }
+
+    #price::after {
+        content: "";
+        position: absolute;
+        width: 450px;
+        top: -30px;
+        right:0px;
+        bottom: 0;
+        background-image: url(./img/menuItem.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+    }
+} */
+
+.overTop {
+    background-image: url(./img/menuItem.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    margin-top: -30px;
+    flex: 1;
+    filter: sepia(30%)
+}
+
