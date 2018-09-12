@@ -1,4 +1,4 @@
-function addLoadEvent(function2) {
+export function addLoadEvent(function2) {
     console.log('檢查onload');
     var oldonload = window.onload;
     if (typeof window.onload != 'function') {
@@ -14,7 +14,7 @@ function addLoadEvent(function2) {
     console.log(oldonload);
 }
 
-function openFb(fbLink) {
+export function openFb(fbLink) {
     console.log('檢查openFB');
     if (!fbLink) return;
     var headID = document.getElementsByTagName("head")[0];
